@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elvandor</title>
+    <title>Survival Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Elvandor</h1>
+    <h1>Survival Game</h1>
     <div>
-        <button id="chopButton" onclick="chop()">Chop Wood</button>
-        <button id="mineButton" onclick="mine()">Mine Stone</button>
+        <button id="chopButton" onclick="performAction('chop')">Chop Wood</button>
+        <button id="mineButton" onclick="performAction('mine')">Mine Stone</button>
+        <button id="craftButton" onclick="performAction('craft')">Craft Items</button>
+        <button id="nextTurnButton" onclick="nextTurn()">Next Turn</button>
     </div>
     <div id="output"></div>
+    <script src="game.js"></script>
 </body>
-<script src="game.js"></script>
 </html>
